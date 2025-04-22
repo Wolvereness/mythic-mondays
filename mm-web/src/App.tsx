@@ -319,11 +319,11 @@ function settleTeams(list: Participant[]): TeamSet {
         ];
         for (const participant of list) {
             quickTable[
-            (participant.tank ? 0b001 : 0)
-            + (participant.healer ? 0b010 : 0)
-            + (participant.damage ? 0b100 : 0)
+                (participant.tank ? 0b001 : 0)
+                    + (participant.healer ? 0b010 : 0)
+                    + (participant.damage ? 0b100 : 0)
                 ]
-            (participant);
+                (participant);
         }
     }
 
