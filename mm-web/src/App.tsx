@@ -498,11 +498,11 @@ function settleTeams(list: Participant[]): TeamSet {
         bestPugs.damage = currentPugs.damage;
     }
 
-    for (current.tankHealer = 0; current.tankHealer < leftover.tankHealer.length; current.tankHealer++) {
-        for (current.tankDamage = 0; current.tankDamage < leftover.tankDamage.length; current.tankDamage++) {
-            for (current.healerDamage = 0; current.healerDamage < leftover.healerDamage.length; current.healerDamage++) {
-                for (current.flexT = 0; current.flexT < leftover.flex.length; current.flexT++) {
-                    for (current.flexH = 0; current.flexT + current.flexH < leftover.flex.length; current.flexH++) {
+    for (current.tankHealer = 0; current.tankHealer <= leftover.tankHealer.length; current.tankHealer++) {
+        for (current.tankDamage = 0; current.tankDamage <= leftover.tankDamage.length; current.tankDamage++) {
+            for (current.healerDamage = 0; current.healerDamage <= leftover.healerDamage.length; current.healerDamage++) {
+                for (current.flexT = 0; current.flexT <= leftover.flex.length; current.flexT++) {
+                    for (current.flexH = 0; current.flexT + current.flexH <= leftover.flex.length; current.flexH++) {
                         setCurrentScore();
                         setCurrentPugs();
                         switch (shouldUpdateBestForPugs()) {
