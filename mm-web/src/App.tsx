@@ -574,7 +574,7 @@ function TeamList({teams: teamSet, hide}: { teams: TeamSet, hide?: boolean }) {
         for (let i = teamCount - 1; i >= 0; i--) {
             teams[i] = {
                 tank: teamSet.tanks[i],
-                healer: teamSet.healers[teamCount - i],
+                healer: teamSet.healers[teamCount - i - 1],
                 damage1: undefined,
                 damage2: undefined,
                 damage3: undefined,
