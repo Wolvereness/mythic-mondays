@@ -328,9 +328,12 @@ function settleTeams(list: Participant[]): TeamSet {
     }
 
     ([leftover.tankHealer, leftover.tankDamage, leftover.healerDamage])
-        .forEach(participants => participants.sort(
-            (l, r) => l.weight - r.weight,
-        ));
+        .forEach(participants => {
+            shuffleInPlace(participants);
+            participants.sort(
+                (l, r) => l.weight - r.weight,
+            );
+        });
 
     const scores = {
         tankHealer: [0],
