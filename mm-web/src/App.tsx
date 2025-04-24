@@ -380,18 +380,18 @@ function settleTeams(list: Participant[]): TeamSet {
         return score;
     }
 
-    for (let ix = 0; ix < leftover.tankHealer.length; ix++) {
+    for (let ix = 0; ix <= leftover.tankHealer.length; ix++) {
         scores.tankHealer[ix] = calculateScore(ix, leftover.tankHealer);
     }
-    for (let ix = 0; ix < leftover.tankDamage.length; ix++) {
+    for (let ix = 0; ix <= leftover.tankDamage.length; ix++) {
         scores.tankDamage[ix] = calculateScore(ix, leftover.tankDamage);
     }
-    for (let ix = 0; ix < leftover.healerDamage.length; ix++) {
+    for (let ix = 0; ix <= leftover.healerDamage.length; ix++) {
         scores.healerDamage[ix] = calculateScore(ix, leftover.healerDamage);
     }
-    for (let tanks = 0; tanks < leftover.flex.length; tanks++) {
+    for (let tanks = 0; tanks <= leftover.flex.length; tanks++) {
         const subFlex: number[] = scores.flex[tanks] = [0];
-        for (let healers = 0; healers + tanks < leftover.flex.length; healers++) {
+        for (let healers = 0; healers + tanks <= leftover.flex.length; healers++) {
             subFlex[healers] = 0; // FIXME
         }
     }
