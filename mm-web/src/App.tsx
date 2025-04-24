@@ -327,7 +327,7 @@ function settleTeams(list: Participant[]): TeamSet {
         }
     }
 
-    ([leftover.tankHealer, leftover.tankHealer, leftover.healerDamage])
+    ([leftover.tankHealer, leftover.tankDamage, leftover.healerDamage])
         .forEach(participants => participants.sort(
             (l, r) => l.weight - r.weight,
         ));
